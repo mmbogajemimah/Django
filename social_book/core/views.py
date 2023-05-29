@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
@@ -5,8 +6,15 @@ from django.contrib.auth.models import User, auth
 from .models import Profile
 
 # Create your views here.
+@login_required(login_url='signin')
 def index(request):
     return render(request, 'index.html')
+
+
+@login_required(login_url='signin')
+def settings(request):
+    user_profile = Profile.objects.get(user=request.user)
+    return render(request, 'setting.html', {'user_profile': user_profile})
 
 def signup(request):
     if request.method == "POST":
@@ -27,12 +35,14 @@ def signup(request):
                 user.save()
 
                 #Log user in and redirect to settings page
+                user_login = auth.authenticate(username=username, password=password)
+                auth.login(request, user_login)
 
                 #Create a profile object for th enew user
                 user_model = User.objects.get(username=username)
                 new_profile = Profile.objects.create(user=user_model,id_user=user_model.id)
                 new_profile.save()
-                return redirect('signin')
+                return redirect('settings')
 
 
         else:
@@ -58,6 +68,7 @@ def signin(request):
     else:
         return render(request, 'signin.html')
     
+@login_required(login_url='signin')
 def logout (request):
     auth.logout(request)
     return redirect('signin')
