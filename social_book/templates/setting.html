@@ -14,6 +14,19 @@
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
 
+    <style>
+        .profileimage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+        .uploadimage {
+            border-radius: 10%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,8 +58,10 @@
                            
                            
                             <div class="col-span-2">
-                                <label for=""> Profile Image</label>
-                                <img width="100" height="100" src="{{user_profile.profileimg.url}}" />
+                                <div class="profileimage">
+                                    <label for=""> Profile Image</label>
+                                    <img class="uploadimage"  width="150" height="100" src="{{user_profile.profileimg.url}}" />
+                                </div>
                                 <input type="file" name="image" value="" class="shadow-none bg-gray-100">
                             </div>
                             <div class="col-span-2">
