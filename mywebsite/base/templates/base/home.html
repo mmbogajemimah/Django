@@ -1,0 +1,99 @@
+{% load static %}
+
+<!-- <h3>Hello World</h3>
+
+<img src="{% static 'images/profile4.jpeg' %}" alt=""> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website </title>
+    <link href="{% static '/css/main.css' %}" rel="stylesheet" href="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+</head>
+<body class="main-body">
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-body" id="profile-wrapper">
+                    <img id="profile-pic" src="{% static 'images/profile4.jpeg' %}" alt="">
+                    <hr>
+                    <h5>Hi I'm Jemimah</h5>
+                    <p>I love coding, researching, collaborating and reading</p>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="card card-body">
+                    <h5>My First Job as a Developer</h5>
+                    <hr>
+                    <p>
+                        In my first job as a junior developer, I embarked on an exciting journey of growth and learning. The initial days were filled with onboarding and orientation, where I familiarized myself with the company's development environment, tools, and processes. Meeting my colleagues and being assigned a mentor provided me with the necessary support and guidance.
+                    </p>
+                    <p>
+                        As I dove into the projects, I spent significant time studying the existing codebase, understanding its structure, architecture, and conventions. Collaborating with the experienced members of the team was invaluable. I actively participated in team meetings, engaging in discussions, and eagerly absorbing their feedback during code reviews. This collaboration helped me grasp project requirements, learn best practices, and continuously enhance my skills.
+                    </p>
+                    <p>
+                        Gradually, I transitioned from handling smaller tasks and bug fixes to working on new features and enhancements. I embraced the challenges and focused on problem-solving and debugging. The guidance from my colleagues and their encouragement to explore new technologies allowed me to expand my knowledge and expertise. With a growth mindset and dedication to continuous learning, I laid a solid foundation for my career as a developer.
+                    </p>
+                    <p>
+                        Overall, my first job as a junior developer was a pivotal experience that laid the groundwork for my professional growth. I embraced the opportunities to learn, collaborate, and contribute to the development process. By actively engaging with the codebase, collaborating with the team, and continuously improving my skills, I set myself on a path towards becoming a seasoned developer in the software development industry.
+                    </p>
+
+                    <ul class="social-links">
+                        <li><img class="social" src="{% static 'images/facebook.png' %}" alt=""></li>
+                        <li><img class="social" src="{% static 'images/linkedin.png' %}" alt=""></li>
+                        <li><img class="social" src="{% static 'images/twitter.png' %}" alt=""></li>
+                        <li><img class="social" src="{% static 'images/youtube.png' %}" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-body">
+                    <h5>My Experience as a Developer</h5>
+                    <hr>
+                    <p>
+                        As a junior developer, I've had a diverse and enriching experience. I started by learning and training, acquiring new skills while receiving guidance from experienced developers. Collaborating with my team, I've worked on real-world projects, gradually taking on more responsibilities. Bug fixing, troubleshooting, and continuous learning have been integral. Code reviews and feedback have helped me improve, while problem solving and innovation have fostered creative thinking. I've experienced growth, taking on challenging projects, and approach each day with a positive attitude, eager to contribute to our team's success.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-body">
+                    <h5>What I know</h5>
+                    <hr>
+                    <p>Python
+                        JavaScript
+                        HTML/CSS
+                        Java
+                        C#
+                        Ruby
+                        C/C++
+                        PHP
+                        Swift
+                        Kotlin
+                        TypeScript
+                        SQL
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-body"></div>
+            </div>
+            <div class="col-md-9">
+                <div class="card card-body"></div>
+            </div>
+        </div>
+        <br>
+    </div>
+</body>
+</html>
